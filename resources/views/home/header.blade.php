@@ -21,6 +21,7 @@
                     <a href="index.html" class="logo">
                         <img src="assets/images/logo.png" alt="">
                     </a>
+                    
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
@@ -30,10 +31,13 @@
                         <li><a href="author.html">Author</a></li>
                         <li><a href="create.html">Create Yours</a></li>
 
-                        @if (Route::has('login'))
+                          @if (Route::has('login'))
                                 @auth
-                                       <x-app-layout>
-                                        </x-app-layout>
+                                <li>
+                                      <x-app-layout>
+                                      </x-app-layout>
+                                </li>
+                                      
                                 @else
                                   <li><a href="{{ route('login') }}">Login</a></li>
 
@@ -41,10 +45,11 @@
                                   <li><a href="{{ route('register') }}">Register</a></li>
                                     @endif
                                 @endauth
-                              
-                        @endif
-
+                          @endif
                     </ul>   
+
+
+
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
