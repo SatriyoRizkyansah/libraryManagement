@@ -31,6 +31,22 @@
 
             <div class="div_center">
 
+              <div>
+
+                @if(session()->has('message'))
+
+                  <div class="alert alert-success">
+
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+
+                    {{ session()->get('message') }}
+
+                  </div>
+
+                @endif
+
+              </div>
+
                 <h1 class="cat_label">Add Category</h1>
 
                 <form action="{{ url('add_category') }}" method="Post">
