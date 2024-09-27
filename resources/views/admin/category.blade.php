@@ -11,7 +11,7 @@
 
         .cat_label
         {
-            font-size: 30px;
+            font-size: 31px;
             font-weight: bold;
             padding: 30px;
             color: white;
